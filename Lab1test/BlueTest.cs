@@ -124,6 +124,22 @@ namespace Lab1
             int answer = 0;
 
             // code here
+            if (Math.Abs(d) < Math.Abs(f))
+            {
+                if (d>0)
+                {
+                    answer = -1;
+                }
+            }
+            if (Math.Abs(d)>Math.Abs(f))
+            {
+                if (f > 0)
+                {
+                    answer = 1;
+                }
+            }
+            return answer;
+            
 
             // end
 
@@ -134,6 +150,34 @@ namespace Lab1
             bool answer = false;
 
             // code here
+            int big = a / 2;
+            int mid = b / 2;
+            int small = c / 2;
+            int total = big + mid + small;
+            int minvmest = Math.Min(a, Math.Min(b, c));
+            if (total % 3 == 0)
+            {
+                int x = total / 3;
+
+                if (x >= 1 && x <= minvmest)
+                {
+                    return true;
+                }
+
+            }
+            int smallbonus = total + 1;
+            if(smallbonus%3==0)
+            {
+                int x = smallbonus / 3;
+                if (x>=1 && x<=minvmest)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+            
+
             
             // end
 
