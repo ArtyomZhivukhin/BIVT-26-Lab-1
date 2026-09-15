@@ -1,3 +1,5 @@
+using System.ComponentModel.Design;
+
 namespace Lab1
 {
     public class Blue
@@ -55,6 +57,18 @@ namespace Lab1
             double answer = 0;
 
             // code here
+            double max = d;
+            if (Math.Abs(f) > Math.Abs(max) )
+            {
+                max = f;
+            }
+            if (Math.Abs(g) > Math.Abs(max))
+            {
+                max = g;
+            }
+            return max;
+            
+            
 
             // end
 
@@ -65,7 +79,21 @@ namespace Lab1
             double answer = 0;
 
             // code here
+            double y;
+            if (x <= -1)
+            {
+                y = 0;
+            }
+            else if (x <= 0)
+            {
+                y = x + 1;
 
+            }
+            else
+            {
+                y = 1;
+            }
+            return y;
             // end
 
             return answer;
@@ -75,7 +103,17 @@ namespace Lab1
             bool answer = false;
 
             // code here
+            double r = Math.Sqrt(circleS / Math.PI);
+            double a = Math.Sqrt(squareS);
+            if (2 * r <= a)
+            {
+                answer = true;
 
+            }
+            else
+            {
+                answer = false;
+            }
             // end
 
             return answer;
@@ -86,6 +124,22 @@ namespace Lab1
             int answer = 0;
 
             // code here
+            if (Math.Abs(d) < Math.Abs(f))
+            {
+                if (d>0)
+                {
+                    answer = -1;
+                }
+            }
+            if (Math.Abs(d)>Math.Abs(f))
+            {
+                if (f > 0)
+                {
+                    answer = 1;
+                }
+            }
+            return answer;
+            
 
             // end
 
@@ -96,6 +150,34 @@ namespace Lab1
             bool answer = false;
 
             // code here
+            int big = a / 2;
+            int mid = b / 2;
+            int small = c / 2;
+            int total = big + mid + small;
+            int minvmest = Math.Min(a, Math.Min(b, c));
+            if (total % 3 == 0)
+            {
+                int x = total / 3;
+
+                if (x >= 1 && x <= minvmest)
+                {
+                    return true;
+                }
+
+            }
+            int smallbonus = total + 1;
+            if(smallbonus%3==0)
+            {
+                int x = smallbonus / 3;
+                if (x>=1 && x<=minvmest)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+            
+
             
             // end
 
